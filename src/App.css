@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root {
+    --color-main: #5BA4A4;
+    --color-bg: #EFFAFA;
+    --color-filter: #EEF6F6;
+    --color-grey: #7B8E8E;
+    --color-dark-grey: #2C3A3A;
+    --color-white: #FFF;
+
+    --font-main: 'League Spartan', 'Tahoma', sans-serif;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    --border-rounded: 6px;
+    --box-shadow: 0 10px 20px rgba(123, 142, 142, .15);
+    --transition: .2s ease-in all;
+}
+
+html {
+    background-color: var(--color-bg);
+    font-family: var(--font-main);
+    font-size: 93.75%;
+    box-sizing: border-box;
+}

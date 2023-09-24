@@ -1,0 +1,27 @@
+.filter-item {
+    display: inline-block;
+    font-family: inherit;
+    font-weight: var(--font-weight-bold);
+    font-size: 1.1rem;
+    color: var(--color-main);
+    background-color: var(--color-filter);
+    border-radius: 4px 0 0 4px;
+    padding: .7rem .6rem .62rem .6rem;
+    margin-left: 1rem;
+    outline: none;
+    border: none;
+}
+
+.rounded-corners-all {
+    border-radius: 4px;
+}
+
+.hover {
+    transition: var(--transition);
+}
+
+.hover:hover {
+    background-color: var(--color-main);
+    color: var(--color-white);
+    cursor: pointer;
+}

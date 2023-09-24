@@ -1,0 +1,53 @@
+.filter-bar {
+    position: absolute;
+    transform: translateY(-50%);
+    width: 77%;
+    height: 5rem;
+    margin: auto;
+    left: 0;
+    right: 0;
+    background-color: var(--color-white);
+    border-radius: var(--border-rounded);
+    box-shadow: var(--box-shadow);
+    padding: 1.3rem 2.6rem 1.3rem 1.6rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-remove {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.38rem;
+    height: 2.38rem;
+    background-color: var(--color-main);
+    border-radius: 0 4px 4px 0;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-remove:hover {
+    background-color: var(--color-dark-grey);
+}
+
+.btn-clear {
+    font-size: 1rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-main);
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    transition: var(--transition);
+    position: relative;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+.btn-clear:hover {
+    text-decoration-color: var(--color-main);
+}
