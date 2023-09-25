@@ -14,10 +14,29 @@
     justify-content: space-between;
 }
 
-.btn-remove {
+.filter-list {
+    list-style: none;
     display: flex;
-    align-items: center;
-    justify-content: center;
+}
+
+.selected-filter {
+    position: relative;
+    display: inline-block;
+    font-family: inherit;
+    font-weight: var(--font-weight-bold);
+    font-size: 1.1rem;
+    color: var(--color-main);
+    background-color: var(--color-filter);
+    border-radius: 4px 0 0 4px;
+    padding: .7rem .6rem .62rem .6rem;
+    margin-left: 1rem;
+    margin-right: 2.38rem;
+}
+
+.btn-remove {
+    position: absolute;
+    right: -2.38rem;
+    top: 0;
     width: 2.38rem;
     height: 2.38rem;
     background-color: var(--color-main);

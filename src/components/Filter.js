@@ -1,9 +1,9 @@
 import "./Filter.css";
 
-const Filter = ({hoverable, roundedCorners}) => {
+const Filter = ({filter, onSelectFilter}) => {
     return (
         <li>
-            <button className={`filter-item ${hoverable && 'hover'} ${roundedCorners && 'rounded-corners-all'}`}>Frontend</button>
+            <button onClick={() => onSelectFilter(filter)} className="filter-item">{filter}</button>
         </li>
     );
 };

@@ -1,31 +1,30 @@
 import Filter from "./Filter";
-import logo from './../assets/faceit.svg';
 import './Job.css';
 
-const Job = () => {
+const Job = ({job, onSelectFilter}) => {
+    const filters = [job.role, job.level, job.languages, job.tools].flat();
+
     return (
-        <section className="job-item job-featured">
+        <section className={`job-item ${job.featured && 'job-featured'}`}>
             <div className="text-container">
-                <div className="img-container"><img src={logo} alt=""/></div>
+                <div className="img-container"><img src={job.logo} alt="Logo"/></div>
                 <div>
-                    <p className="role">Photosnap</p>
-                    <span className="flag flag-new">New!</span>
-                    <span className="flag flag-featured">Featured</span>
+                    <p className="role">{job.company}</p>
+                    {job.new && <span className="flag flag-new">New!</span>}
+                    {job.featured && <span className="flag flag-featured">Featured</span>}
                     <div>
-                        <h1 className="position">Senior Frontend Developer</h1>
+                        <h1 className="position">{job.position}</h1>
                         <ul className="details-list">
-                            <li className="details-item">1d ago</li>
-                            <li className="details-item">Full Time</li>
-                            <li className="details-item">USA only</li>
+                            <li className="details-item">{job.postedAt}</li>
+                            <li className="details-item">{job.contract}</li>
+                            <li className="details-item">{job.location}</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div className="filters-container">
                 <ul className="filter-list">
-                    <Filter roundedCorners={true} hoverable={true}/>
-                    <Filter roundedCorners={true} hoverable={true}/>
-                    <Filter roundedCorners={true} hoverable={true}/>
+                    {filters.map(filter => <Filter filter={filter} key={filter} onSelectFilter={onSelectFilter}/>)}
                 </ul>
             </div>
         </section>

@@ -89,7 +89,7 @@
     content: "·";
     position: absolute;
     width: 2.3rem;
-   text-align: center;
+    text-align: center;
 }
 
 .filters-container {
@@ -104,4 +104,3 @@
     list-style: none;
     display: flex;
 }
-

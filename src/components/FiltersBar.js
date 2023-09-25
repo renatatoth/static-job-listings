@@ -1,15 +1,17 @@
-import Filter from "./Filter";
 import "./FiltersBar.css";
-import removeIcon from "./../assets/icon-remove.svg"
+import removeIcon from "./../assets/icon-remove.svg";
 
-const FiltersBar = () => {
+const FiltersBar = ({filters, onClearFilters, onRemoveFilter}) => {
     return (
         <div className="filter-bar">
             <ul className="filter-list">
-                <Filter/><button className="btn-remove"><img src={removeIcon} alt=""/></button>
-                <Filter/><button className="btn-remove"><img src={removeIcon} alt=""/></button>
+                {filters.map(filter =>
+                    <li key={filter} className="selected-filter">
+                        <span>{filter}</span>
+                        <button onClick={() => onRemoveFilter(filter)} className="btn-remove"><img src={removeIcon} alt="Remove"/></button>
+                    </li>)}
             </ul>
-            <button className="btn-clear">Clear</button>
+            <button className="btn-clear" onClick={onClearFilters}>Clear</button>
         </div>
     );
 };
