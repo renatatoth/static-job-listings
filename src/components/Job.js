@@ -9,9 +9,11 @@ const Job = ({job, onSelectFilter}) => {
             <div className="text-container">
                 <div className="img-container"><img src={job.logo} alt="Logo"/></div>
                 <div>
-                    <p className="role">{job.company}</p>
-                    {job.new && <span className="flag flag-new">New!</span>}
-                    {job.featured && <span className="flag flag-featured">Featured</span>}
+                    <div className="flags">
+                        <p className="role">{job.company}</p>
+                        {job.new && <span className="flag flag-new">New!</span>}
+                        {job.featured && <span className="flag flag-featured">Featured</span>}
+                    </div>
                     <div>
                         <h1 className="position">{job.position}</h1>
                         <ul className="details-list">

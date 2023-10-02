@@ -3,3 +3,9 @@
     height: 10.4rem;
     background: url('../assets/bg-header-desktop.svg'), var(--color-main);
 }
+
+@media screen and (max-width: 510px) {
+    .header {
+        background: url('../assets/bg-header-mobile.svg'), var(--color-main);
+    }
+}

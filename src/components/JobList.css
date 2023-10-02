@@ -1,5 +1,19 @@
 .job-list-container {
+    grid-row-start: 2;
     width: 77%;
     display: block;
     margin: 5rem auto;
+}
+
+@media screen and (max-width: 1208px) {
+    .job-list-container {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .job-list-container {
+        width: calc(100% - 3.2rem);
+        margin: 3.7rem auto 0;
+    }
 }

@@ -43,8 +43,10 @@ function App() {
     return (
         <>
             <Header/>
-            {selectedFilters.length > 0 && <FiltersBar filters={selectedFilters} onRemoveFilter={removeFilterHandler} onClearFilters={clearFiltersHandler}/>}
-            <JobList jobsData={jobs} onSelectFilter={selectFilterHandler}/>
+            <main className="main">
+                {selectedFilters.length > 0 && <FiltersBar filters={selectedFilters} onRemoveFilter={removeFilterHandler} onClearFilters={clearFiltersHandler}/>}
+                <JobList jobsData={jobs} onSelectFilter={selectFilterHandler}/>
+            </main>
         </>
     );
 }

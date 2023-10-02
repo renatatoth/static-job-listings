@@ -6,12 +6,19 @@
     color: var(--color-main);
     background-color: var(--color-filter);
     border-radius: 4px;
-    padding: .7rem .6rem .62rem .6rem;
-    margin-left: 1rem;
+    height: 2.1rem;
+    padding: .6rem;
+    margin: 0 0 0 1rem;
     outline: none;
     border: none;
     transition: var(--transition);
     cursor: pointer;
+}
+
+@media screen and (max-width: 1208px) {
+    .filter-item {
+        margin: 1rem 1rem 0 0;
+    }
 }
 
 .filter-item:hover {

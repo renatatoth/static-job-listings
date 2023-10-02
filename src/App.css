@@ -53,3 +53,9 @@ html {
         transform: translateY(0);
     }
 }
+
+.main {
+    display: grid;
+    grid-template-rows: minmax(5rem, 1fr) auto;
+    transform: translateY(-2.5rem);
+}
